@@ -960,31 +960,33 @@ section {
     font-size: 4rem;
   }
 }
-.info p {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+/* =======================================
+   FIX: Light Mode Contact Form Styling
+   ======================================= */
+
+body.light-mode .contact-content-con .right-contact .input-control input,
+body.light-mode .contact-content-con .right-contact .input-control textarea {
+  background-color: #e9e9e9; /* visible light gray background */
+  color: #333; /* darker text */
+  border: 1px solid #ccc; /* visible border */
 }
-.contact-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+
+body.light-mode .contact-content-con .right-contact .input-control input::placeholder,
+body.light-mode .contact-content-con .right-contact .input-control textarea::placeholder {
+  color: #777; /* softer placeholder color */
+}
+
+/* Optional: make contact icons visible on light mode */
+body.light-mode .contact-content-con .left-contact .contact-icon a {
+  background-color: #e0e0e0;
+  color: #333;
+}
+body.light-mode .contact-content-con .left-contact .contact-icon a:hover {
+  background-color: var(--color-secondary);
   color: #fff;
 }
 
-.contact-item .icon {
-  width: 30px; /* adjust for icon spacing */
-  text-align: center;
-  margin-right: 10px;
+/* Optional: slightly lighter container for contrast */
+body.light-mode .container {
+  background-color: #fafafa;
 }
-
-.contact-item i {
-  font-size: 16px;
-}
-
-.contact-item p {
-  margin: 0;
-  line-height: 1.6;
-}
-
-/*# sourceMappingURL=styles.css.map */
